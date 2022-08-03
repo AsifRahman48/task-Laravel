@@ -10,6 +10,7 @@
 
 </head>
 <body>
+@include('layout.navigation')
 
 @yield('content')
 {{--    @include('layout.navigarion')--}}
