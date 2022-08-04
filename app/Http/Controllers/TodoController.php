@@ -27,7 +27,7 @@ class TodoController extends Controller
         $res->save();
 
         $request->session()->flush('msg','Data Submitted');
-        return redirect('Todo_show');
+        return redirect( 'Todo_show');
     }
 
 
@@ -45,6 +45,8 @@ class TodoController extends Controller
 
     public function update(Request $request, $id)
     {
+
+        dd(auth()->user());
         $res=Todo::find($request->id);
         $res->name=$request->input('name');
         $res->save();
