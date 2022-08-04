@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TodoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +40,9 @@ Route::group(['middleware'=>'auth'],function (){
     Route::get('logout',[AdminController::class,'logout'])->name('logout');
 });
 
+Route::get('Todo_show',[TodoController::class,'show'])->name('todo.show');
+Route::get('todo_delete/{id}',[TodoController::class,'destroy'])->name('todo.destroy');
+Route::get('todo_create',[TodoController::class,'create'])->name('todo.create');
+Route::post('todo_submit',[TodoController::class,'store'])->name('todo.store');
+Route::get('todo_edit/{id}',[TodoController::class,'edit'])->name('todo.edit');
+Route::post('todo_update/{id}',[TodoController::class,'update'])->name('todo.update');

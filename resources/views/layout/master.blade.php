@@ -10,10 +10,9 @@
 
 </head>
 <body>
-@include('layout.navigation')
-
+{{--@include('layout.navigation')--}}
+@include('layout.nav')
 @yield('content')
-{{--    @include('layout.navigarion')--}}
 
 @include('JS')
 @yield('js')
