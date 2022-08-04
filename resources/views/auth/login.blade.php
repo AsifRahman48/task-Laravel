@@ -1,7 +1,6 @@
-@extends('layout.master')
-@section('title','login')
 
-@section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+
     <div class="wrapper">
         <div class="logo">
             <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
@@ -27,4 +26,4 @@
         </div>
     </div>
 
-@endsection
+
