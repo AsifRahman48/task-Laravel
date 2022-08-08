@@ -26,7 +26,7 @@ class TodoController extends Controller
         $res->name=$request->input('name');
         $res->save();
 
-        $request->session()->flush('msg','Data Submitted');
+        $request->session()->flash('msg','Data Submitted');
         return redirect( 'Todo_show');
     }
 
@@ -46,12 +46,12 @@ class TodoController extends Controller
     public function update(Request $request, $id)
     {
 
-        dd(auth()->user());
+
         $res=Todo::find($request->id);
         $res->name=$request->input('name');
         $res->save();
 
-        $request->session()->flush('msg','Data updated');
+        $request->session()->flash('msg','Data updated');
         return redirect('Todo_show');
     }
 
